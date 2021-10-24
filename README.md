@@ -1,3 +1,46 @@
+# Frontend Mentor - Planets fact site
+
+This is a solution to the [Planets fact site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f/hub/planets-fact-site-vYAoceuEq). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout depending on their device's screen size
+
+### Screenshot
+
+<img alt="Desktop screenshoot" src="./src/assets/screenshots/desktop.png"  width=600 align=center>
+
+<img alt="Mobile screenshoot" src="./src/assets/screenshots/mobile.jpg"  width=300 align=center>
+
+### Links
+
+- Solution URL: [GitHub](https://github.com/rparias/planets-fact-site)
+- Live Site URL: [GitHub Pages](https://rparias.github.io/Planets-fact-site/)
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+
+### What I learned
+
+Refreshing concepts.
+
+## Author
+
+- Frontend Mentor - [@rparias](https://www.frontendmentor.io/profile/rparias)
+- Twitter - [@rparias\_](https://twitter.com/rparias_)
+
+## Acknowledgments
+
+Curious about how improve the functionality of background-size property.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
