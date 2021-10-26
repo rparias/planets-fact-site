@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './components/shared/Button'
 import GlobalStyle from './globalStyles'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed
         vel lacus.
       </p>
+      <Button />
     </>
   )
 }
