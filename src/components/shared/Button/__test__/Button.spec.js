@@ -1,6 +1,5 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import Button from '../index'
 
 describe('Button component', () => {
@@ -21,5 +20,11 @@ describe('Button component', () => {
     render(<Button isActive={true} />)
     const button = screen.getByRole('button', { name: /button/i })
     expect(button).toHaveClass('active')
+  })
+
+  it('should display a button with a custom color if it is passed as parameter', () => {
+    render(<Button color="#D14C32" />)
+    const button = screen.getByRole('button', { name: /button/i })
+    expect(button).toHaveStyle('background-color: #D14C32')
   })
 })
