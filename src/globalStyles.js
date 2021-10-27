@@ -17,10 +17,13 @@ export const COLORS = {
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap');
-  body {
+  * {
     margin: 0;
     padding: 0;
     color: ${COLORS.text};
+  }
+  
+  body {
     background: ${COLORS.background};
     font-family: 'Spartan', sans-serif;
     font-size: 14px;
@@ -28,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 25px;
   }
 
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, button {
     text-transform: uppercase;
   }
 
@@ -45,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: -1.5px;
   }
 
-  h3 {
+  h3, button {
     font-family: 'Spartan', sans-serif;
     font-size: 12px;
     font-weight: 700;

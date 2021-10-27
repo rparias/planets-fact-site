@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from './components/shared/Button'
-import GlobalStyle from './globalStyles'
+import GlobalStyle, { COLORS } from './globalStyles'
 
 function App() {
   return (
@@ -24,6 +24,7 @@ function App() {
         vel lacus.
       </p>
       <Button />
+      <Button activeColor={COLORS.earth} />
     </>
   )
 }
