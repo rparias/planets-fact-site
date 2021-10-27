@@ -16,7 +16,6 @@ export const COLORS = {
 }
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap');
   * {
     margin: 0;
     padding: 0;
