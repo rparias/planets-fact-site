@@ -1,5 +1,6 @@
 {
   "name": "react-template",
+  "homepage": "https://rparias.github.io/planets-fact-site/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,7 +22,9 @@
     "eject": "react-scripts eject",
     "lint": "prettier --check . && eslint --ignore-path .gitignore .",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +53,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.1",
     "eslint-plugin-react": "^7.26.1",
+    "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.4",
     "prettier": "2.4.1"
