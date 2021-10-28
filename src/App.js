@@ -1,11 +1,13 @@
 import React from 'react'
 import Button from './components/shared/Button'
+import Menubar from './components/shared/Menubar'
 import GlobalStyle, { COLORS } from './globalStyles'
 
 function App() {
   return (
     <>
       <GlobalStyle />
+      <Menubar />
       <h1>Donec Justo eget</h1>
       <h2>Felis Facilisis Fermentum</h2>
       <h3>Aliquam Porttitor Mauris Sit Amet Orci</h3>
