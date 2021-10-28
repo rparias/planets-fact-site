@@ -19,6 +19,7 @@ const ButtonWrapper = styled.button`
   height: 48px;
   border: 0.5px solid ${COLORS.text};
   text-align: start;
+  margin: 8px 0;
 
   span {
     color: ${COLORS.lightGray};
