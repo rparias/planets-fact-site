@@ -1,5 +1,7 @@
 import React from 'react'
 import Navbar from './_styles'
+import Menubutton from './Menubutton/_button'
+import { COLORS } from '../../../globalStyles'
 
 const Menubar = () => {
   return (
@@ -7,28 +9,28 @@ const Menubar = () => {
       <h2>The planets</h2>
       <ul>
         <li>
-          <button>Mercury</button>
+          <Menubutton text="Mercury" activeColor={COLORS.mercury} />
         </li>
         <li>
-          <button>Venus</button>
+          <Menubutton text="Venus" activeColor={COLORS.venus} />
         </li>
         <li>
-          <button>Earth</button>
+          <Menubutton text="Earth" activeColor={COLORS.earth} />
         </li>
         <li>
-          <button>Mars</button>
+          <Menubutton text="Mars" activeColor={COLORS.mars} />
         </li>
         <li>
-          <button>Jupiter</button>
+          <Menubutton text="Jupiter" activeColor={COLORS.jupiter} />
         </li>
         <li>
-          <button>Saturn</button>
+          <Menubutton text="Saturn" activeColor={COLORS.saturn} />
         </li>
         <li>
-          <button>Uranus</button>
+          <Menubutton text="Uranus" activeColor={COLORS.uranus} />
         </li>
         <li>
-          <button>Neptune</button>
+          <Menubutton text="Neptune" activeColor={COLORS.neptune} />
         </li>
       </ul>
     </Navbar>

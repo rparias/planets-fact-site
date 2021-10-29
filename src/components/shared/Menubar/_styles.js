@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { COLORS } from '../../../globalStyles'
 
 const Navbar = styled.nav`
   display: flex;
@@ -14,21 +13,6 @@ const Navbar = styled.nav`
     display: flex;
     list-style: none;
     margin-right: 24px;
-
-    li {
-      button {
-        background: none;
-        border: none;
-        font-size: 11px;
-        color: ${COLORS.lightGray};
-        padding: 33px 16px;
-
-        &:hover {
-          color: ${COLORS.text};
-          cursor: pointer;
-        }
-      }
-    }
   }
 `
 
