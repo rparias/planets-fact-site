@@ -21,20 +21,18 @@ const ButtonWrapper = styled.button`
   text-align: start;
   margin: 8px 0;
 
-  span {
-    color: ${COLORS.lightGray};
-    margin: 28px 12px;
-  }
-
   &.active-color {
     background-color: ${(props) => props.activeColor || COLORS.mercury};
-    border: 0.5px solid ${(props) => props.activeColor || COLORS.mercury};
   }
 
   &:hover {
     background-color: ${COLORS.darkGray};
-    border: 0.5px solid ${COLORS.darkGray};
     cursor: pointer;
+  }
+
+  span {
+    color: ${COLORS.lightGray};
+    margin: 28px 12px;
   }
 `
 
