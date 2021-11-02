@@ -16,6 +16,20 @@ const Navbar = styled.nav`
     list-style: none;
     margin-right: 24px;
   }
+
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 52px;
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin-right: 0;
+    }
+  }
 `
 
 export default Navbar
