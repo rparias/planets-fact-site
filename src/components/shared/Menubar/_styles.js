@@ -17,10 +17,13 @@ const Navbar = styled.nav`
     margin-right: 24px;
   }
 
-  @media only screen and (max-width: 1024px) {
+  svg {
+    display: none;
+  }
+
+  @media only screen and (max-width: 1023px) {
     flex-direction: column;
     align-items: center;
-    padding: 0 52px;
 
     h2 {
       margin-bottom: 0;
@@ -28,6 +31,23 @@ const Navbar = styled.nav`
 
     ul {
       margin-right: 0;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    flex-direction: row;
+    padding: 0 24px;
+
+    ul {
+      display: none;
+    }
+
+    h2 {
+      margin: 16px 0;
+    }
+
+    svg {
+      display: block;
     }
   }
 `

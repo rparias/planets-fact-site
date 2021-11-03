@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './_styles'
 import Menubutton from './Menubutton/_button'
 import { COLORS } from '../../../globalStyles'
+import { ReactComponent as HamburguerIcon } from '../../../assets/icon-hamburger.svg'
 
 const Menubar = () => {
   return (
@@ -33,6 +34,7 @@ const Menubar = () => {
           <Menubutton text="Neptune" activeColor={COLORS.neptune} />
         </li>
       </ul>
+      <HamburguerIcon />
     </Navbar>
   )
 }
