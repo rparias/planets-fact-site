@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from './_styles'
 import Menubutton from './Menubutton/_button'
 import { COLORS } from '../../../globalStyles'
+import useWindowDimensions from './hooks/useWindowDimensions'
 import { ReactComponent as HamburguerIcon } from '../../../assets/icon-hamburger.svg'
 
 const Menubar = () => {
+  const { height, width } = useWindowDimensions()
   return (
     <Navbar>
       <h2>The planets</h2>
+      <HamburguerIcon />
       <ul>
         <li>
           <Menubutton text="Mercury" activeColor={COLORS.mercury} />
@@ -34,7 +37,9 @@ const Menubar = () => {
           <Menubutton text="Neptune" activeColor={COLORS.neptune} />
         </li>
       </ul>
-      <HamburguerIcon />
+      <p>
+        width: {width} ~ height: {height}
+      </p>
     </Navbar>
   )
 }
