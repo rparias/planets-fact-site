@@ -6,7 +6,7 @@ const Button = styled.button`
   padding: 20px 50px;
   background-color: transparent;
   border: none;
-  border-top: 1px solid ${COLORS.lightGray};
+  border-top: 1px solid ${COLORS.darkGray};
   text-align: left;
   position: relative;
 
