@@ -17,17 +17,19 @@ const ButtonWrapper = styled.button`
   background-color: ${COLORS.background};
   width: 350px;
   height: 48px;
-  border: 0.5px solid ${COLORS.text};
+  border: 0.5px solid ${COLORS.darkGray};
   text-align: start;
   margin: 8px 0;
 
   &.active-color {
     background-color: ${(props) => props.activeColor || COLORS.mercury};
+    border: none;
   }
 
   &:hover {
     background-color: ${COLORS.darkGray};
     cursor: pointer;
+    border: none;
   }
 
   span {
