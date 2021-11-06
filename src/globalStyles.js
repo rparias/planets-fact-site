@@ -30,6 +30,14 @@ const GlobalStyle = createGlobalStyle`
     line-height: 25px;
   }
 
+  main {
+    padding: 36px 40px;
+
+    @media (max-width: 768px) {
+      padding: 48px 24px;
+    } 
+  }
+
   h1, h2, h3, h4, button {
     text-transform: uppercase;
   }
