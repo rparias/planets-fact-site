@@ -46,7 +46,8 @@ const Navbar = styled.nav`
     }
 
     .active {
-      display: flex;
+      display: block;
+      height: 100vh;
     }
 
     h2 {

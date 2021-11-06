@@ -4,7 +4,7 @@ import { COLORS } from '../../../../globalStyles'
 const Button = styled.button`
   width: 100%;
   padding: 20px 50px;
-  background-color: transparent;
+  background-color: ${COLORS.background};
   border: none;
   border-top: 1px solid ${COLORS.darkGray};
   text-align: left;
