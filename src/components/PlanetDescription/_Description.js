@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Wrapper from './styles/_Description.styles'
+import { ReactComponent as SourceIcon } from '../../assets/icon-source.svg'
 
 export const _Description = ({ name, overview: { content, source } }) => {
   return (
@@ -11,6 +12,7 @@ export const _Description = ({ name, overview: { content, source } }) => {
       <a href={source} target="_blank" rel="noreferrer">
         Wikipedia
       </a>
+      <SourceIcon />
     </Wrapper>
   )
 }

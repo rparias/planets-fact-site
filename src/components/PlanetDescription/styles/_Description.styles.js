@@ -13,6 +13,7 @@ const Wrapper = styled.article`
   a {
     font-weight: bold;
     color: ${COLORS.lightGray};
+    margin-right: 8px;
   }
 `
 export default Wrapper
