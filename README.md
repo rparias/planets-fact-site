@@ -19,7 +19,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/rparias/planets-fact-site)
-- Live Site URL: [GitHub Pages](https://rparias.github.io/Planets-fact-site/)
+- Live Site URL: [GitHub Pages](https://rparias.github.io/planets-fact-site/)
 
 ### Built with
 
