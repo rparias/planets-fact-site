@@ -17,7 +17,7 @@ const Menubar = () => {
     <Navbar>
       <h2>The planets</h2>
       <HamburguerIcon onClick={handleMenuToggle} />
-      {width > 768 ? <BigMenu /> : <SmallMenu />}
+      {width >= 768 ? <BigMenu /> : <SmallMenu />}
     </Navbar>
   )
 }
