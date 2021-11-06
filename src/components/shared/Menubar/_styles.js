@@ -40,8 +40,13 @@ const Navbar = styled.nav`
     padding: 0 24px;
 
     ul {
+      display: none;
       flex-direction: column;
       flex-basis: 100%;
+    }
+
+    .active {
+      display: flex;
     }
 
     h2 {

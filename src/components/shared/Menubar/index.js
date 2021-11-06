@@ -7,10 +7,16 @@ import { _SmallMenu as SmallMenu } from './_SmallMenu'
 
 const Menubar = () => {
   const { width } = useWindowDimensions()
+
+  const handleMenuToggle = () => {
+    const menu = document.querySelector('.menu')
+    menu.classList.toggle('active')
+  }
+
   return (
     <Navbar>
       <h2>The planets</h2>
-      <HamburguerIcon />
+      <HamburguerIcon onClick={handleMenuToggle} />
       {width > 768 ? <BigMenu /> : <SmallMenu />}
     </Navbar>
   )

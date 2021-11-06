@@ -4,7 +4,7 @@ import SmallMenubutton from './SmallMenubutton/_button'
 
 export const _SmallMenu = () => {
   return (
-    <ul>
+    <ul className="menu">
       <li>
         <SmallMenubutton text="Mercury" color={COLORS.mercury} />
       </li>
