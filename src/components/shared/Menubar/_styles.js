@@ -36,10 +36,12 @@ const Navbar = styled.nav`
 
   @media only screen and (max-width: 767px) {
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 0 24px;
 
     ul {
-      display: none;
+      flex-direction: column;
+      flex-basis: 100%;
     }
 
     h2 {

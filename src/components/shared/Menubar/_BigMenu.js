@@ -2,7 +2,7 @@ import React from 'react'
 import Menubutton from './Menubutton/_button'
 import { COLORS } from '../../../globalStyles'
 
-const BigMenu = () => {
+export const _BigMenu = () => {
   return (
     <ul>
       <li>
@@ -32,5 +32,3 @@ const BigMenu = () => {
     </ul>
   )
 }
-
-export default BigMenu
