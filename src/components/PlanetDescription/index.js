@@ -2,11 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { _Description as Description } from './_Description'
+import { _Buttons as Buttons } from './_Buttons'
 
 const PlanetDescription = ({ planet }) => {
   return (
     <Wrapper>
       <Description {...planet} />
+      <Buttons />
     </Wrapper>
   )
 }
