@@ -34,7 +34,24 @@ const ButtonWrapper = styled.button`
 
   span {
     color: ${COLORS.lightGray};
-    margin: 28px 12px;
+    margin: 12px 28px;
+  }
+
+  @media only screen and (max-width: 1023px) {
+    max-width: 281px;
+
+    span {
+      margin: 8px 20px;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+    margin: 0;
+
+    span {
+      display: none;
+    }
   }
 `
 
