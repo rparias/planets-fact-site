@@ -7,8 +7,8 @@ export const _Buttons = () => {
   return (
     <ButtonsContainer>
       <Button number={1} text="Overview" activeColor={COLORS.mercury} />
-      <Button number={2} text="Internal Structure" />
-      <Button number={3} text="Surface geology" />
+      <Button number={2} text="Internal Structure" smallText="Structure" />
+      <Button number={3} text="Surface geology" smallText="Surface" />
     </ButtonsContainer>
   )
 }
