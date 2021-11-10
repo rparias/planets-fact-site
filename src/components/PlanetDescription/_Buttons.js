@@ -1,14 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 import Button from '../../components/shared/Button'
+import SmallButton from '../../components/shared/SmallButton'
+import useWindowDimensions from '../shared/hooks/useWindowDimensions'
 import { COLORS } from '../../globalStyles'
 
 export const _Buttons = () => {
+  const { width } = useWindowDimensions()
+
   return (
     <ButtonsContainer>
-      <Button number={1} text="Overview" activeColor={COLORS.mercury} />
-      <Button number={2} text="Internal Structure" smallText="Structure" />
-      <Button number={3} text="Surface geology" smallText="Surface" />
+      {width >= 768 ? (
+        <>
+          <Button number={1} text="Overview" activeColor={COLORS.mercury} />
+          <Button number={2} text="Internal Structure" />
+          <Button number={3} text="Surface geology" />
+        </>
+      ) : (
+        <>
+          <SmallButton text="Overview" activeColor={COLORS.mercury} />
+          <SmallButton text="Structure" />
+          <SmallButton text="Surface" />
+        </>
+      )}
     </ButtonsContainer>
   )
 }

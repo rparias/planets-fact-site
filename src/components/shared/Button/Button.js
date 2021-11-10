@@ -1,17 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import useWindowDimensions from '../hooks/useWindowDimensions'
 import { COLORS } from '../../../globalStyles'
 
-const Button = ({ text, activeColor, number, smallText }) => {
-  const { width } = useWindowDimensions()
+const Button = ({ text, activeColor, number }) => {
   const padNumber = (number = 1) => String(number).padStart(2, '0')
 
   return (
     <ButtonWrapper className={activeColor && 'active-color'} activeColor={activeColor}>
       <span>{padNumber(number)}</span>
-      {width >= 768 ? text || 'Button' : smallText || text || 'Button'}
+      {text || 'Button'}
     </ButtonWrapper>
   )
 }
@@ -39,30 +37,12 @@ const ButtonWrapper = styled.button`
     color: ${COLORS.lightGray};
     margin: 12px 28px;
   }
-
-  @media only screen and (max-width: 1023px) {
-    max-width: 281px;
-
-    span {
-      margin: 8px 20px;
-    }
-  }
-
-  @media only screen and (max-width: 767px) {
-    width: 100%;
-    margin: 0;
-
-    span {
-      display: none;
-    }
-  }
 `
 
 Button.propTypes = {
   text: PropTypes.string,
   activeColor: PropTypes.string,
-  number: PropTypes.number,
-  smallText: PropTypes.string
+  number: PropTypes.number
 }
 
 export default Button
