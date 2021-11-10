@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import BackgroundImage from './assets/background-stars.svg'
 
 export const COLORS = {
   text: '#FFFFFF',
@@ -24,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
   
   body {
     background: ${COLORS.background};
+    background-image: url('${BackgroundImage}');
     font-family: 'Spartan', sans-serif;
     font-size: 14px;
     font-weight: 400;
