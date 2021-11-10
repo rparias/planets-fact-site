@@ -20,6 +20,6 @@ describe('Button component', () => {
     render(<SmallButton activeColor="#D14C32" />)
     const button = screen.getByRole('button', { name: /button/i })
     expect(button).toHaveClass('active-color')
-    expect(button).toHaveStyle('background-color: #D14C32')
+    expect(button).toHaveStyle('background-color: transparent')
   })
 })

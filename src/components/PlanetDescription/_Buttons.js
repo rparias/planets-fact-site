@@ -38,5 +38,6 @@ const ButtonsContainer = styled.article`
     position: absolute;
     top: 84px;
     left: 0;
+    border-bottom: 1px solid ${COLORS.lightGray};
   }
 `
