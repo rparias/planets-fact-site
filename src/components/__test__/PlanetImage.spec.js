@@ -7,7 +7,7 @@ describe('PlanetImage component', () => {
     const planet = {
       name: 'Mercury',
       images: {
-        planet: './assets/planet-mercury.svg'
+        planet: '/assets/planet-mercury.svg'
       }
     }
     const {
@@ -22,7 +22,7 @@ describe('PlanetImage component', () => {
   it('should display an image with an alternative text if is not passed as prop', () => {
     const planet = {
       images: {
-        planet: './assets/planet-mercury.svg'
+        planet: '/assets/planet-mercury.svg'
       }
     }
     const {
@@ -36,7 +36,7 @@ describe('PlanetImage component', () => {
   it('should display an image with the proper source', () => {
     const planet = {
       images: {
-        planet: './assets/planet-mercury.svg'
+        planet: '/assets/planet-mercury.svg'
       }
     }
     const {
@@ -44,6 +44,6 @@ describe('PlanetImage component', () => {
     } = planet
     render(<PlanetImage source={source} />)
     const image = screen.getByRole('img')
-    expect(image).toHaveAttribute('src', './assets/planet-mercury.svg')
+    expect(image).toHaveAttribute('src', '/assets/planet-mercury.svg')
   })
 })
