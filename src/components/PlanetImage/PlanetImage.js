@@ -2,7 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const PlanetImage = ({ source, altText }) => {
-  return <img src={process.env.PUBLIC_URL + source} alt={altText || 'Planet'} />
+  return (
+    <picture>
+      <img src={process.env.PUBLIC_URL + source} alt={altText || 'Planet'} />
+    </picture>
+  )
 }
 
 PlanetImage.propTypes = {

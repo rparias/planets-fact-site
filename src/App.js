@@ -3,6 +3,7 @@ import Menubar from './components/shared/Menubar'
 import PlanetImage from './components/PlanetImage'
 import PlanetDescription from './components/PlanetDescription'
 import GlobalStyle from './globalStyles'
+import MainContainer from './styles'
 
 function App() {
   const planet = {
@@ -26,10 +27,10 @@ function App() {
     <>
       <GlobalStyle />
       <Menubar />
-      <main>
+      <MainContainer>
         <PlanetImage altText={name} source={source} />
         <PlanetDescription planet={planet} />
-      </main>
+      </MainContainer>
     </>
   )
 }
