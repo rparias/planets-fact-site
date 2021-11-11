@@ -15,5 +15,9 @@ const Wrapper = styled.article`
     color: ${COLORS.lightGray};
     margin-right: 8px;
   }
+
+  @media only screen and (max-width: 767px) {
+    text-align: center;
+  }
 `
 export default Wrapper
