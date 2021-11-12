@@ -2,8 +2,9 @@ import React from 'react'
 import Menubar from './components/shared/Menubar'
 import PlanetImage from './components/PlanetImage'
 import PlanetDescription from './components/PlanetDescription'
+import PlanetFact from './components/PlanetFact'
 import GlobalStyle from './globalStyles'
-import MainContainer from './styles'
+import { MainContainer, FactsContainer } from './styles'
 
 function App() {
   const planet = {
@@ -15,13 +16,28 @@ function App() {
     },
     images: {
       planet: '/assets/planet-mercury.svg'
-    }
+    },
+    rotation: '0.99 Days',
+    revolution: '365.26 Days',
+    radius: '6,371 KM',
+    temperature: '16°c'
   }
 
   const {
     name,
-    images: { planet: source }
+    images: { planet: source },
+    rotation,
+    revolution,
+    radius,
+    temperature
   } = planet
+
+  const facts = [
+    { property: 'Rotation time', value: rotation },
+    { property: 'Revolution Time', value: revolution },
+    { property: 'Radius', value: radius },
+    { property: 'Average temp.', value: temperature }
+  ]
 
   return (
     <>
@@ -30,6 +46,11 @@ function App() {
       <MainContainer>
         <PlanetImage altText={name} source={source} />
         <PlanetDescription planet={planet} />
+        <FactsContainer>
+          {facts.map((fact, index) => (
+            <PlanetFact key={index} {...fact} />
+          ))}
+        </FactsContainer>
       </MainContainer>
     </>
   )

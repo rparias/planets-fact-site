@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import PlanetImageContainer from './styles'
 
 const PlanetImage = ({ source, altText }) => {
   return (
-    <picture>
+    <PlanetImageContainer>
       <img src={process.env.PUBLIC_URL + source} alt={altText || 'Planet'} />
-    </picture>
+    </PlanetImageContainer>
   )
 }
 

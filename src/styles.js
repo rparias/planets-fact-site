@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 const MainContainer = styled.main`
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  padding-top: 5%;
+  padding: 5% 12%;
 
   @media only screen and (max-width: 1023px) {
     flex-direction: column;
@@ -34,4 +35,14 @@ const MainContainer = styled.main`
   }
 `
 
-export default MainContainer
+const FactsContainer = styled.article`
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+`
+
+export { MainContainer, FactsContainer }
