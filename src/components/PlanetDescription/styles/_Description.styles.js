@@ -7,7 +7,7 @@ const Wrapper = styled.article`
   }
 
   span {
-    color: ${COLORS.darkGray};
+    color: ${COLORS.lightGray};
   }
 
   a {

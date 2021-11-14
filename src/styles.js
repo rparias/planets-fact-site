@@ -9,6 +9,7 @@ const MainContainer = styled.main`
 
   @media only screen and (max-width: 1023px) {
     flex-direction: column;
+    padding: 5%;
     padding-top: 0;
 
     picture {
@@ -37,8 +38,13 @@ const MainContainer = styled.main`
 
 const FactsContainer = styled.article`
   display: flex;
-  flex: 0 0 100%;
+  width: 100%;
+  margin-top: 80px;
   justify-content: space-between;
+
+  @media only screen and (max-width: 1023px) {
+    margin-top: 30px;
+  }
 
   @media only screen and (max-width: 767px) {
     flex-direction: column;
