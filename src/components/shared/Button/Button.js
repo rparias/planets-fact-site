@@ -37,6 +37,15 @@ const ButtonWrapper = styled.button`
     color: ${COLORS.lightGray};
     margin: 12px 28px;
   }
+
+  @media only screen and (max-width: 1023px) {
+    width: 280px;
+    font-size: 9px;
+
+    span {
+      margin: 8px 20px;
+    }
+  }
 `
 
 Button.propTypes = {

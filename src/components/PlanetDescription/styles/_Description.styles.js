@@ -16,8 +16,19 @@ const Wrapper = styled.article`
     margin-right: 8px;
   }
 
+  @media only screen and (max-width: 1023px) {
+    span,
+    a {
+      font-size: 12px;
+    }
+  }
+
   @media only screen and (max-width: 767px) {
     text-align: center;
+
+    p {
+      margin-top: 0;
+    }
   }
 `
 export default Wrapper

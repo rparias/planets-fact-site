@@ -25,6 +25,7 @@ const MainContainer = styled.main`
   }
 
   @media only screen and (max-width: 767px) {
+    padding: 6%;
     picture {
       height: 300px;
       margin-top: 65px;

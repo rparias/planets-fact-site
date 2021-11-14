@@ -49,6 +49,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Antonio', sans-serif;
     font-size: 80px;
     line-height: 103px;
+
+    @media only screen and (max-width: 1023px) {
+      font-size: 48px;
+    }
   }
 
   h2 {
@@ -72,6 +76,13 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 700;
     line-height: 25px;
     letter-spacing: 1px;
+  }
+
+  p {
+    @media only screen and (max-width: 1023px) {
+      font-size: 11px;
+      line-height: 22px;
+    }
   }
 `
 
