@@ -37,7 +37,6 @@ const Navbar = styled.nav`
   @media only screen and (max-width: 767px) {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 24px;
 
     ul {
       display: none;
@@ -57,6 +56,16 @@ const Navbar = styled.nav`
 
     svg {
       display: block;
+    }
+
+    @media only screen and (max-width: 767px) {
+      h2 {
+        margin-left: 24px;
+      }
+
+      svg {
+        margin-right: 24px;
+      }
     }
   }
 `

@@ -3,7 +3,7 @@ import { COLORS } from '../../../../globalStyles'
 
 const Button = styled.button`
   width: 100%;
-  padding: 20px 50px;
+  padding: 20px 64px;
   background-color: ${COLORS.background};
   border: none;
   border-top: 1px solid ${COLORS.darkGray};
@@ -12,7 +12,7 @@ const Button = styled.button`
 
   &::before {
     position: absolute;
-    left: 0;
+    left: 24px;
     content: '';
     width: 20px;
     height: 20px;
@@ -23,7 +23,7 @@ const Button = styled.button`
 
   &::after {
     position: absolute;
-    right: 10px;
+    right: 24px;
     content: '>';
     color: ${COLORS.darkGray};
   }
