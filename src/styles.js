@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import { COLORS } from './globalStyles'
 
 const MainContainer = styled.main`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 5% 12%;
+  padding: 4% 12%;
 
   @media only screen and (max-width: 1023px) {
     flex-direction: column;
@@ -52,4 +53,12 @@ const FactsContainer = styled.article`
   }
 `
 
-export { MainContainer, FactsContainer }
+const FooterContainer = styled.footer`
+  text-align: center;
+  color: ${COLORS.lightGray};
+  @media only screen and (max-width: 767px) {
+    font-size: 11px;
+  }
+`
+
+export { MainContainer, FactsContainer, FooterContainer }

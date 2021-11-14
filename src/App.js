@@ -4,7 +4,7 @@ import PlanetImage from './components/PlanetImage'
 import PlanetDescription from './components/PlanetDescription'
 import PlanetFact from './components/PlanetFact'
 import GlobalStyle from './globalStyles'
-import { MainContainer, FactsContainer } from './styles'
+import { MainContainer, FactsContainer, FooterContainer } from './styles'
 
 function App() {
   const planet = {
@@ -52,6 +52,7 @@ function App() {
           ))}
         </FactsContainer>
       </MainContainer>
+      <FooterContainer>Made by Ronald Arias</FooterContainer>
     </>
   )
 }
