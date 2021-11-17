@@ -44,7 +44,7 @@ function App() {
       <GlobalStyle />
       <Menubar />
       <MainContainer>
-        <PlanetImage altText={name} source={source} />
+        <PlanetImage />
         <PlanetDescription planet={planet} />
         <FactsContainer>
           {facts.map((fact, index) => (

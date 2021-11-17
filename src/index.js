@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { PlanetProvider } from './context/context'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PlanetProvider>
+      <App />
+    </PlanetProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )

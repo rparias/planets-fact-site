@@ -1,17 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PlanetImageContainer from './styles'
+import { PlanetContext } from '../../context/context'
 
-const PlanetImage = ({ source, altText }) => {
+const PlanetImage = () => {
+  const { currentPlanet } = React.useContext(PlanetContext)
+
+  const {
+    name,
+    images: { planet: source }
+  } = currentPlanet
+
   return (
     <PlanetImageContainer>
-      <img src={process.env.PUBLIC_URL + source} alt={altText || 'Planet'} />
+      <img src={process.env.PUBLIC_URL + source} alt={name || 'Planet'} />
     </PlanetImageContainer>
   )
 }
 
-PlanetImage.propTypes = {
-  source: PropTypes.string.isRequired,
-  altText: PropTypes.string
-}
 export default PlanetImage
