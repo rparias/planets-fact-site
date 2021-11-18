@@ -8,6 +8,8 @@ const SmallMenubutton = ({ text, color }) => {
 
   const handleOnClick = () => {
     getPlanet(text)
+    const menu = document.querySelector('.menu')
+    menu.classList.remove('active')
   }
 
   return (
