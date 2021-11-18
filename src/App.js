@@ -45,7 +45,7 @@ function App() {
       <Menubar />
       <MainContainer>
         <PlanetImage />
-        <PlanetDescription planet={planet} />
+        <PlanetDescription />
         <FactsContainer>
           {facts.map((fact, index) => (
             <PlanetFact key={index} {...fact} />
