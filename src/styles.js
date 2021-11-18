@@ -38,21 +38,6 @@ const MainContainer = styled.main`
   }
 `
 
-const FactsContainer = styled.article`
-  display: flex;
-  width: 100%;
-  margin-top: 80px;
-  justify-content: space-between;
-
-  @media only screen and (max-width: 1023px) {
-    margin-top: 30px;
-  }
-
-  @media only screen and (max-width: 767px) {
-    flex-direction: column;
-  }
-`
-
 const FooterContainer = styled.footer`
   text-align: center;
   color: ${COLORS.lightGray};
@@ -61,4 +46,4 @@ const FooterContainer = styled.footer`
   }
 `
 
-export { MainContainer, FactsContainer, FooterContainer }
+export { MainContainer, FooterContainer }
