@@ -2,9 +2,13 @@ import styled from 'styled-components'
 import { COLORS } from '../../../globalStyles'
 
 const Navbar = styled.nav`
+  position: sticky;
+  top: 0;
+  background-color: ${COLORS.background};
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid ${COLORS.lightGray};
+  z-index: 2;
 
   h2 {
     font-size: 28px;
