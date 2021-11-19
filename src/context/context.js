@@ -6,14 +6,21 @@ const PlanetContext = React.createContext()
 
 const PlanetProvider = ({ children, props }) => {
   const [currentPlanet, setCurrentPlanet] = useState(planetData[0])
+  const [currentFact, setCurrentFact] = useState(planetData[0].overview)
 
   const getPlanet = (name) => {
     const planet = planetData.find((planet) => planet.name === name)
     setCurrentPlanet(planet)
   }
 
+  const getFact = (factName) => {
+    setCurrentFact(currentPlanet[factName])
+  }
+
   return (
-    <PlanetContext.Provider value={{ currentPlanet, getPlanet }}>{children}</PlanetContext.Provider>
+    <PlanetContext.Provider value={{ currentPlanet, getPlanet, currentFact, getFact }}>
+      {children}
+    </PlanetContext.Provider>
   )
 }
 

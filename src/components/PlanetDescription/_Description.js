@@ -4,11 +4,9 @@ import { ReactComponent as SourceIcon } from '../../assets/icon-source.svg'
 import { PlanetContext } from '../../context/context'
 
 export const _Description = () => {
-  const { currentPlanet } = React.useContext(PlanetContext)
-  const {
-    name,
-    overview: { content, source }
-  } = currentPlanet
+  const { currentPlanet, currentFact } = React.useContext(PlanetContext)
+  const { name } = currentPlanet
+  const { content, source } = currentFact
 
   return (
     <Wrapper>

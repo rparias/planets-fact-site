@@ -2,12 +2,25 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { COLORS } from '../../../globalStyles'
+import { PlanetContext } from '../../../context/context'
 
-const Button = ({ text, activeColor, number }) => {
+const Button = ({ text, activeColor, number, name }) => {
+  const { getFact } = React.useContext(PlanetContext)
+
+  const handleOnClick = (e) => {
+    e.preventDefault()
+    getFact(e.target.name)
+  }
+
   const padNumber = (number = 1) => String(number).padStart(2, '0')
 
   return (
-    <ButtonWrapper className={activeColor && 'active-color'} activeColor={activeColor}>
+    <ButtonWrapper
+      className={activeColor && 'active-color'}
+      activeColor={activeColor}
+      name={name}
+      onClick={handleOnClick}
+    >
       <span>{padNumber(number)}</span>
       {text || 'Button'}
     </ButtonWrapper>
@@ -51,7 +64,8 @@ const ButtonWrapper = styled.button`
 Button.propTypes = {
   text: PropTypes.string,
   activeColor: PropTypes.string,
-  number: PropTypes.number
+  number: PropTypes.number,
+  name: PropTypes.string
 }
 
 export default Button
