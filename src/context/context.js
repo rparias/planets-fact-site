@@ -7,6 +7,7 @@ const PlanetContext = React.createContext()
 const PlanetProvider = ({ children, props }) => {
   const [currentPlanet, setCurrentPlanet] = useState(planetData[0])
   const [currentFact, setCurrentFact] = useState(planetData[0].overview)
+  const [currentImage, setCurrentImage] = useState(planetData[0].images.planet)
 
   const getPlanet = (name) => {
     const planet = planetData.find((planet) => planet.name === name)
@@ -15,14 +16,34 @@ const PlanetProvider = ({ children, props }) => {
 
   const getFact = (factName) => {
     setCurrentFact(currentPlanet[factName])
+    getImageByFact(factName)
+  }
+
+  const getImageByFact = (factName) => {
+    switch (factName) {
+      case 'overview':
+        setCurrentImage(currentPlanet.images.planet)
+        break
+      case 'structure':
+        setCurrentImage(currentPlanet.images.internal)
+        break
+      case 'geology':
+        setCurrentImage(currentPlanet.images.geology)
+        break
+      default:
+        setCurrentImage(currentPlanet.images.planet)
+    }
   }
 
   useEffect(() => {
     setCurrentFact(currentPlanet.overview)
+    setCurrentImage(currentPlanet.images.planet)
   }, [currentPlanet])
 
   return (
-    <PlanetContext.Provider value={{ currentPlanet, getPlanet, currentFact, getFact }}>
+    <PlanetContext.Provider
+      value={{ currentPlanet, getPlanet, currentFact, getFact, currentImage }}
+    >
       {children}
     </PlanetContext.Provider>
   )

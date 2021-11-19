@@ -3,16 +3,13 @@ import PlanetImageContainer from './styles'
 import { PlanetContext } from '../../context/context'
 
 const PlanetImage = () => {
-  const { currentPlanet } = React.useContext(PlanetContext)
+  const { currentPlanet, currentImage } = React.useContext(PlanetContext)
 
-  const {
-    name,
-    images: { planet: source }
-  } = currentPlanet
+  const { name } = currentPlanet
 
   return (
     <PlanetImageContainer>
-      <img src={process.env.PUBLIC_URL + source} alt={name || 'Planet'} />
+      <img src={process.env.PUBLIC_URL + currentImage} alt={name || 'Planet'} />
     </PlanetImageContainer>
   )
 }
