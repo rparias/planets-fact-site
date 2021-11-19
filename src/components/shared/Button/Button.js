@@ -4,19 +4,20 @@ import styled from 'styled-components'
 import { COLORS } from '../../../globalStyles'
 import { PlanetContext } from '../../../context/context'
 
-const Button = ({ text, number, name }) => {
-  const { getFact, setActive, currentPlanet } = React.useContext(PlanetContext)
+const Button = ({ text, number, name, active, setActiveButton }) => {
+  const { getFact, currentPlanet } = React.useContext(PlanetContext)
 
   const handleOnClick = (e) => {
     e.preventDefault()
     getFact(e.target.name)
-    setActive(e.target.name)
+    setActiveButton(e.target.name)
   }
 
   const padNumber = (number = 1) => String(number).padStart(2, '0')
 
   return (
     <ButtonWrapper
+      className={active ? 'active-color' : ''}
       activeColor={COLORS[currentPlanet.name.toLowerCase()]}
       name={name}
       onClick={handleOnClick}
@@ -64,7 +65,9 @@ const ButtonWrapper = styled.button`
 Button.propTypes = {
   text: PropTypes.string,
   number: PropTypes.number,
-  name: PropTypes.string
+  name: PropTypes.string,
+  active: PropTypes.bool,
+  setActiveButton: PropTypes.func
 }
 
 export default Button

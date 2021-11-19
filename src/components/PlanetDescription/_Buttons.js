@@ -8,19 +8,50 @@ import { COLORS } from '../../globalStyles'
 export const _Buttons = () => {
   const { width } = useWindowDimensions()
 
+  const setActiveButton = (buttonName) => {
+    console.log({ buttonName })
+    const previousActiveButtons = document.querySelectorAll('.active-color')
+    console.log({ previousActiveButtons })
+    previousActiveButtons.forEach((button) => {
+      button.classList.remove('active-color')
+    })
+
+    const newActiveButtons = document.querySelectorAll(`[name=${buttonName}]`)
+    console.log({ newActiveButtons })
+    newActiveButtons.forEach((button) => {
+      button.classList.add('active-color')
+    })
+  }
+
   return (
     <ButtonsContainer>
       {width >= 768 ? (
         <>
-          <Button number={1} text="Overview" name="overview" />
-          <Button number={2} text="Internal Structure" name="structure" />
-          <Button number={3} text="Surface geology" name="geology" />
+          <Button
+            number={1}
+            text="Overview"
+            name="overview"
+            setActiveButton={setActiveButton}
+            active
+          />
+          <Button
+            number={2}
+            text="Internal Structure"
+            name="structure"
+            setActiveButton={setActiveButton}
+          />
+          <Button
+            number={3}
+            text="Surface geology"
+            name="geology"
+            setActiveButton={setActiveButton}
+          />
         </>
       ) : (
         <>
-          <SmallButton text="Overview" name="overview" />
-          <SmallButton text="Structure" name="structure" />
-          <SmallButton text="Surface" name="geology" />
+          <SmallButton text="Overview" name="overview" active setActiveButton={setActiveButton} />
+          <SmallButton text="Structure" name="structure" setActiveButton={setActiveButton} />
+          <SmallButton text="Surface" name="geology" setActiveButton={setActiveButton} />
         </>
       )}
     </ButtonsContainer>

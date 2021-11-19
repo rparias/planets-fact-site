@@ -7,7 +7,6 @@ const PlanetContext = React.createContext()
 const PlanetProvider = ({ children, props }) => {
   const [currentPlanet, setCurrentPlanet] = useState(planetData[0])
   const [currentFact, setCurrentFact] = useState(planetData[0].overview)
-  const [activeButton, setActiveButton] = useState('overview')
 
   const getPlanet = (name) => {
     const planet = planetData.find((planet) => planet.name === name)
@@ -18,25 +17,12 @@ const PlanetProvider = ({ children, props }) => {
     setCurrentFact(currentPlanet[factName])
   }
 
-  const setActive = (buttonName) => {
-    const previousActiveButtons = document.getElementsByName(activeButton)
-    previousActiveButtons.forEach((button) => {
-      button.classList.remove('active-color')
-    })
-    const newActiveButtons = document.getElementsByName(buttonName)
-    newActiveButtons.forEach((button) => {
-      button.classList.add('active-color')
-    })
-    setActiveButton(buttonName)
-  }
-
   useEffect(() => {
-    setActive('overview')
     setCurrentFact(currentPlanet.overview)
   }, [currentPlanet])
 
   return (
-    <PlanetContext.Provider value={{ currentPlanet, getPlanet, currentFact, getFact, setActive }}>
+    <PlanetContext.Provider value={{ currentPlanet, getPlanet, currentFact, getFact }}>
       {children}
     </PlanetContext.Provider>
   )
