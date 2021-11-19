@@ -12,13 +12,13 @@ export const _Buttons = () => {
     <ButtonsContainer>
       {width >= 768 ? (
         <>
-          <Button number={1} text="Overview" name="overview" activeColor={COLORS.mercury} />
+          <Button number={1} text="Overview" name="overview" />
           <Button number={2} text="Internal Structure" name="structure" />
           <Button number={3} text="Surface geology" name="geology" />
         </>
       ) : (
         <>
-          <SmallButton text="Overview" name="overview" activeColor={COLORS.mercury} />
+          <SmallButton text="Overview" name="overview" />
           <SmallButton text="Structure" name="structure" />
           <SmallButton text="Surface" name="geology" />
         </>

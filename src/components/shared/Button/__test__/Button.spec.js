@@ -23,11 +23,4 @@ describe('Button component', () => {
     const button = screen.getByRole('button', { name: /button/i })
     expect(button).toHaveTextContent('02')
   })
-
-  it('should display a button with the class active if it is passed as parameter', () => {
-    render(<Button activeColor="#D14C32" />, { wrapper: PlanetProvider })
-    const button = screen.getByRole('button', { name: /button/i })
-    expect(button).toHaveClass('active-color')
-    expect(button).toHaveStyle('background-color: #D14C32')
-  })
 })
